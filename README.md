@@ -193,7 +193,18 @@ DSA PRACTICAL
 12. Bucket Sort
 13. K smallest elements
 14. Bin Sort
-15. Tower of Hanoi
+
+
+# 15. Tower of Hanoi Using Stacks
+
+- **Question Description:** Implement the Tower of Hanoi problem using three stacks: source, auxiliary, and target. Use recursion to transfer disks from the source stack to the target stack while following the recursive movement pattern.
+
+- **Test Cases:**
+  - **Test Case 1:** Move 3 disks from the source stack to the target stack.
+    - **Expected Output:** `1 2 3`
+
+- **Time Complexity:**
+  - Recursive Algorithm: **O(2ⁿ)**, where `n` is the number of disks.
 
 
 # 16. Binary Trees
