@@ -190,9 +190,41 @@ DSA PRACTICAL
   - Build Heap: **O(n)**
   - Heap Sort: **O(n log n)**
  
-12. Bucket Sort
+# 12. Bucket Sort
+
+- **Question Description:** Sort an array of floating-point numbers between `0` and `1` using Bucket Sort. Distribute elements into buckets based on their values, sort each bucket individually, and combine the buckets to produce the sorted array.
+
+- **Test Cases:**
+  - **Test Case 1:** Input: `{0.42, 0.32, 0.23, 0.52, 0.25, 0.47}`
+    - **Expected Output:** `0.23 0.25 0.32 0.42 0.47 0.52`
+
+- **Time Complexity:**
+  - Distributing Elements: **O(n)**
+  - Sorting Individual Buckets: **O(n log n)** average overall
+  - Combining Buckets: **O(n)**
+  - **Average: O(n + k)** under uniform distribution with insertion sort; this implementation uses `std::sort` for each bucket, so its typical average performance is **O(n log n)**.
 13. K smallest elements
-14. Bin Sort
+# 14. Bin Sort
+
+Question Description: Sort an array of non-negative integers using bins. Each bin represents an integer value and stores its frequency. Collect the elements from the bins in ascending order to obtain the sorted array.
+
+Test Cases:
+
+Test Case 1: Input: {4, 2, 7, 1, 4, 3, 2}
+
+Expected Output: 1 2 2 3 4 4 7
+
+Time Complexity:
+
+Finding Maximum: O(n)
+
+Distributing Elements into Bins: O(n)
+
+Collecting Sorted Elements: O(n + k), where k is the maximum element plus one.
+
+Overall: O(n + k)
+
+Note: This implementation assumes the array is non-empty and all elements are non-negative. Its memory usage depends on the maximum value in the array.
 
 
 # 15. Tower of Hanoi Using Stacks
@@ -246,4 +278,21 @@ DSA PRACTICAL
   - Here, `n` is the number of nodes and `h` is the tree height. In the worst case, `h = O(n)`.
 
 18. AVL TREES
-19. Paranthesis Matching
+# 19. Valid Parentheses Using Stack
+
+- **Question Description:** Check whether an equation contains correctly balanced and nested parentheses using a stack implemented with a singly linked list. Supports three types of brackets: `()`, `{}`, and `[]`. Opening brackets are pushed onto the stack, and matching closing brackets pop them.
+
+- **Test Cases:**
+  - **Test Case 1:** Input: `{[()]}`
+    - **Expected Output:** `Correct equation`
+  - **Test Case 2:** Input: `{[(])}`
+    - **Expected Output:** `Invalid equation`
+  - **Test Case 3:** Input: `((()))`
+    - **Expected Output:** `Correct equation`
+  - **Test Case 4:** Input: `(()`
+    - **Expected Output:** `incorrect equation`
+
+- **Time Complexity:**
+  - Checking Parentheses: **O(n)**
+  - Stack Push/Pop Operations: **O(1)** per operation
+  - **Overall: O(n)**, where `n` is the length of the input string.
